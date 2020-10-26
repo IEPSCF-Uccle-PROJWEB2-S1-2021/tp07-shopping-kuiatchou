@@ -7,25 +7,26 @@ bouton.addEventListener("click", ajoute());*/
 
 addItem.addEventListener("click", ajoute);
 
-  function ajoute(){
-  const maVariable = input.value;
-  input.value = "";
-  const sousList = document.createElement("li");
-  const span = document.createElement("span");
-  const dellete = document.createElement("button");
-  sousList.appendChild(span);
-  sousList.appendChild(dellete);
-  span.textContent = maVariable;
-  dellete.textContent = 'delete';
-  list.appendChild(sousList);
+function ajoute(){
+  if(input.value!=""){
+    const maVariable = input.value;
+    input.value = "";
+    const sousList = document.createElement("li");
+    const span = document.createElement("span");
+    const dellete = document.createElement("button");
+    sousList.appendChild(span);
+    sousList.appendChild(dellete);
+    span.textContent = maVariable;
+    dellete.textContent = 'delete';
+    list.appendChild(sousList);
 
-  dellete.onclick = function () {
-    list.removeChild(sousList);
-    input.focus();
+    dellete.onclick = function () {
+      list.removeChild(sousList);
+      input.focus();
+    }
   }
 
   input.focus();
-
 }
 
 
