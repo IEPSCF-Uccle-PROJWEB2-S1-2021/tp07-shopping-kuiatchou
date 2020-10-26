@@ -2,8 +2,6 @@
 const list = document.querySelector("ul");
 const input = document.querySelector("input");
 const addItem = document.querySelector("button");
-/*const delet = document.createElement("button");
-bouton.addEventListener("click", ajoute());*/
 
 addItem.addEventListener("click", ajoute);
 
